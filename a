@@ -1,0 +1,28 @@
+<table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">
+      <thead>
+        <tr>
+          <th>NumTarjeta</th>
+          <th data-priority="1">Saldo</th>
+          <th data-priority="2">Pago Total</th>
+          <th data-priority="3">FechaDeCorte</th>
+          <th data-priority="4">FechaDeVencimiento</th>
+          <th data-priority="5">Estado</th>
+          <th data-priority="6">IBAN</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php
+      foreach ($usuarios as $user) {
+        echo "<tr>";
+        echo "<td>". $user['NumTarjeta'] ."</td>";
+        echo "<td>". $user['SaldoDisponible'] ."</td>";
+        echo "<td>". $user['PagoTotal'] ."</td>";
+        echo "<td>". $user['FechaDeCorte'] ."</td>";
+        echo "<td>". $user['FechaDeVencimiento'] ."</td>";
+        echo "<td>". $user['Estado'] ."</td>";
+        echo "<td>". $user['IBAN'] ."</td>";
+        echo "</tr>";
+    }   
+    ?>
+      </tbody>
+    </table>
